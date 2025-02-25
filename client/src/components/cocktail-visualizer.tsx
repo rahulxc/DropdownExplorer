@@ -28,7 +28,8 @@ const cocktails = [
     garnish: "Lavender Sprig",
     glassware: "coupe",
     method: "stirred",
-    description: "Floral and herbal French-inspired gin cocktail with delicate aromatics."
+    description: "Floral and herbal French-inspired gin cocktail with delicate aromatics.",
+    preparation: "Add all ingredients to mixing glass with ice. Stir gently to preserve delicate floral notes. Strain into a chilled coupe glass. Garnish with a fresh lavender sprig."
   },
   {
     name: "Ready Fire Aim",
@@ -42,7 +43,8 @@ const cocktails = [
     garnish: "Lime Wheel",
     glassware: "coupe",
     method: "shaken",
-    description: "Smoky mezcal with tropical sweetness and a spicy kick."
+    description: "Smoky mezcal with tropical sweetness and a spicy kick.",
+    preparation: "Add all ingredients to shaker with ice. Shake vigorously until well-chilled. Double strain into a chilled coupe glass. Garnish with a lime wheel."
   },
   {
     name: "West Side",
@@ -57,7 +59,8 @@ const cocktails = [
     garnish: "Mint Sprig",
     glassware: "highball",
     method: "shaken",
-    description: "Bright and refreshing vodka cocktail with vibrant citrus and aromatic mint."
+    description: "Bright and refreshing vodka cocktail with vibrant citrus and aromatic mint.",
+    preparation: "Gently muddle mint in shaker. Add remaining ingredients except Perrier. Shake with ice. Double strain into highball glass filled with ice. Top with Perrier. Garnish with mint sprig."
   },
   {
     name: "Fraise Sauvage",
@@ -72,7 +75,8 @@ const cocktails = [
     garnish: "Strawberry",
     glassware: "flute",
     method: "shaken",
-    description: "Elegant gin cocktail with fresh strawberries and vanilla, topped with prosecco."
+    description: "Elegant gin cocktail with fresh strawberries and vanilla, topped with prosecco.",
+    preparation: "Muddle strawberries with vanilla. Add gin and lemon juice. Shake with ice. Double strain into a chilled flute. Top with prosecco. Garnish with a fresh strawberry."
   },
   {
     name: "Amelia",
@@ -86,7 +90,8 @@ const cocktails = [
     garnish: "Blackberry",
     glassware: "coupe",
     method: "shaken",
-    description: "Fruity and floral vodka cocktail with elegant elderflower notes."
+    description: "Fruity and floral vodka cocktail with elegant elderflower notes.",
+    preparation: "Add all ingredients to shaker with ice. Shake vigorously until well-chilled. Double strain into a chilled coupe glass. Garnish with a fresh blackberry."
   },
   {
     name: "Billionaire Cocktail",
@@ -100,7 +105,8 @@ const cocktails = [
     garnish: "Lemon Twist",
     glassware: "coupe",
     method: "shaken",
-    description: "Rich and complex bourbon cocktail with bright citrus and subtle anise notes."
+    description: "Rich and complex bourbon cocktail with bright citrus and subtle anise notes.",
+    preparation: "Add all ingredients to shaker with ice. Shake vigorously for 10-12 seconds. Double strain into a chilled coupe glass. Express oils from lemon twist and garnish."
   },
   {
     name: "Mata Hari",
@@ -114,7 +120,8 @@ const cocktails = [
     garnish: "Orange Peel",
     glassware: "coupe",
     method: "shaken",
-    description: "Mysterious and exotic cognac cocktail with spicy chai notes and tart pomegranate."
+    description: "Mysterious and exotic cognac cocktail with spicy chai notes and tart pomegranate.",
+    preparation: "Add all ingredients to shaker with ice. Shake well until properly chilled. Double strain into a chilled coupe glass. Express oils from orange peel and garnish."
   },
   {
     name: "Old Fashioned",
@@ -128,7 +135,8 @@ const cocktails = [
     garnish: "Orange Peel",
     glassware: "rocks",
     method: "built",
-    description: "The original cocktail - sweet, aromatic whiskey with depth and character."
+    description: "The original cocktail - sweet, aromatic whiskey with depth and character.",
+    preparation: "In a rocks glass, muddle sugar cube with bitters and water. Add bourbon and stir. Add large ice cube. Express oils from orange peel, and garnish."
   },
   {
     name: "Negroni",
@@ -141,7 +149,8 @@ const cocktails = [
     garnish: "Orange Peel",
     glassware: "rocks",
     method: "stirred",
-    description: "Perfectly balanced bitter and herbal Italian classic."
+    description: "Perfectly balanced bitter and herbal Italian classic.",
+    preparation: "Add all ingredients to mixing glass with ice. Stir until well-chilled and properly diluted. Strain into rocks glass over fresh ice. Express oils from orange peel and garnish."
   }
 ];
 
