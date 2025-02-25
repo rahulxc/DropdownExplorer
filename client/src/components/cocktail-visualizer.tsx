@@ -1,7 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, Info } from 'lucide-react';
 
-const cocktails = [
+type Cocktail = {
+  id: number;
+  name: string;
+  ingredients: { name: string; amount: number }[];
+  color: string;
+  garnish: string;
+  glassware: string;
+  method: string;
+  description: string;
+  preparation: string;
+};
+
+const CocktailVisualizer = () => {
+  const [cocktails, setCocktails] = useState<Cocktail[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('/api/cocktails')
+      .then(res => res.json())
+      .then(data => {
+        setCocktails(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError('Failed to load cocktails');
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return <div className="text-white text-center">Loading...</div>;
+  if (error) return <div className="text-red-500 text-center">{error}</div>;
+  if (cocktails.length === 0) return <div className="text-white text-center">No cocktails found</div>;
   {
     name: "Manhattan",
     ingredients: [

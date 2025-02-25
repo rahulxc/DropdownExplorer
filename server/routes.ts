@@ -6,6 +6,37 @@ import { insertUserSchema, insertCocktailSchema } from "@shared/schema"; // Adde
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // put application routes here
+  
+  // Seed initial cocktails if none exist
+  const seedCocktails = async () => {
+    const existingCocktails = await storage.getCocktails();
+    if (existingCocktails.length === 0) {
+      const initialCocktails = [
+        {
+          name: "Manhattan",
+          ingredients: [
+            { name: "Wild Turkey 101 Rye", amount: 2.0 },
+            { name: "Sweet Vermouth", amount: 1.0 },
+            { name: "Angostura Bitters", amount: 0.125 },
+            { name: "Grand Marnier", amount: 0.25 }
+          ],
+          color: "#8B0000",
+          garnish: "Cherry",
+          glassware: "coupe",
+          method: "stirred",
+          description: "Classic whiskey cocktail with a perfect balance of sweet and bitter.",
+          preparation: "Add all ingredients to mixing glass with ice. Stir well until properly chilled and diluted. Strain into a chilled coupe glass. Garnish with a cherry."
+        }
+        // Add other cocktails here
+      ];
+
+      for (const cocktail of initialCocktails) {
+        await storage.createCocktail(cocktail);
+      }
+    }
+  };
+
+  seedCocktails().catch(console.error);
   // prefix all routes with /api
 
   // use storage to perform CRUD operations on the storage interface
