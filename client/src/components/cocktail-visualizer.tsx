@@ -281,12 +281,15 @@ const CocktailVisualizer = () => {
     } else if (selectedCocktail.glassware === "coupe") {
       return (
         <div className="relative flex flex-col items-center">
-          <div className="relative w-40 h-28">
-            <div className="absolute bottom-0 left-0 right-0 mx-auto w-40 h-24 rounded-[100%] overflow-hidden border-2 border-gray-200 border-opacity-40">
-              <div className="w-full h-full rounded-[100%]" style={getCocktailGradient(selectedCocktail.color)}></div>
+          <div className="relative w-48 h-32">
+            <div className="absolute bottom-0 left-0 right-0 mx-auto w-40 h-16 rounded-b-full overflow-hidden border-2 border-b-0 border-l-0 border-r-0 border-t-2 border-gray-200 border-opacity-40">
+              <div className="w-full h-full rounded-b-full" style={getCocktailGradient(selectedCocktail.color)}></div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 mx-auto w-48 h-8 rounded-full overflow-hidden border-2 border-b-0 border-l-0 border-r-0 border-t-2 border-gray-200 border-opacity-40">
+              <div className="w-full h-full rounded-full" style={getCocktailGradient(selectedCocktail.color)}></div>
             </div>
           </div>
-          <div className="w-2 h-12 bg-gradient-to-b from-gray-100 to-gray-300 bg-opacity-80"></div>
+          <div className="w-2 h-16 bg-gradient-to-b from-gray-100 to-gray-300 bg-opacity-80"></div>
           <div className="w-16 h-2 rounded-full bg-gradient-to-b from-gray-200 to-gray-400"></div>
         </div>
       );
