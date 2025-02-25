@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const cocktails = [
   {
     name: "Manhattan",
-    image: "https://images.unsplash.com/photo-1566733971017-f6a46e761a80?w=800&auto=format&fit=crop",
+    image: "https://www.thecocktaildb.com/images/media/drink/hz7p4t1589575281.jpg",
     ingredients: [
       { name: "Wild Turkey 101 Rye", amount: 2.0 },
       { name: "Sweet Vermouth", amount: 1.0 },
@@ -20,6 +20,7 @@ const cocktails = [
   },
   {
     name: "Provençal",
+    image: "https://www.thecocktaildb.com/images/media/drink/vcyvpq1485083300.jpg",
     ingredients: [
       { name: "Lavender-infused Roku Gin", amount: 1.75 },
       { name: "Herbs de Provence Vermouth", amount: 0.75 },
