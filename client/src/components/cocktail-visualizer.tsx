@@ -356,11 +356,23 @@ const CocktailVisualizer = () => {
 
         <div className="max-w-md mx-auto bg-gray-800 bg-opacity-60 p-6 rounded-lg backdrop-blur-sm border border-gray-700">
           {selectedCocktail.image && (
-            <div className="mb-4 rounded-lg overflow-hidden">
+            <div className="mb-4 rounded-lg overflow-hidden relative">
+              <div 
+                className="absolute inset-0" 
+                style={{
+                  background: `linear-gradient(180deg, 
+                    transparent 0%, 
+                    ${selectedCocktail.color}40 70%, 
+                    ${selectedCocktail.color}80 100%)`
+                }}
+              />
               <img 
                 src={selectedCocktail.image} 
                 alt={selectedCocktail.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-56 object-cover rounded-lg transform transition-transform duration-300 hover:scale-105"
+                style={{
+                  boxShadow: `0 4px 20px ${selectedCocktail.color}40`
+                }}
               />
             </div>
           )}
