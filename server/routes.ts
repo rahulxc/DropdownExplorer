@@ -175,6 +175,70 @@ export async function registerRoutes(app: Express): Promise<Server> {
           method: "shaken",
           description: "Smoky and tropical mezcal cocktail.",
           preparation: "Shake all ingredients with ice. Strain into a rocks glass over fresh ice. Garnish with a lime wheel."
+        },
+        {
+          name: "Irish Rose",
+          ingredients: [
+            { name: "Ketel One Vodka", amount: 1.5 },
+            { name: "Bombay Sapphire Premier Cru Gin", amount: 1.0 },
+            { name: "Cranberry Juice", amount: 0.75 },
+            { name: "Apple Juice", amount: 0.5 },
+            { name: "Thyme", amount: 0.25 }
+          ],
+          color: "#FFB6C1",
+          garnish: "Thyme Sprig",
+          glassware: "coupe",
+          method: "shaken",
+          description: "A delicate blend of vodka and gin with fruity notes and herbal complexity.",
+          preparation: "Shake all ingredients with ice. Double strain into a chilled coupe glass. Garnish with a fresh thyme sprig."
+        },
+        {
+          name: "Emerald Sunset",
+          ingredients: [
+            { name: "Grey Goose Vodka", amount: 1.5 },
+            { name: "Campari", amount: 0.75 },
+            { name: "Blood Orange Juice", amount: 1.0 },
+            { name: "Carrot Juice", amount: 0.5 },
+            { name: "Mint", amount: 0.25 },
+            { name: "Lime Juice", amount: 0.5 }
+          ],
+          color: "#FFA07A",
+          garnish: "Mint Sprig",
+          glassware: "rocks",
+          method: "shaken",
+          description: "A vibrant sunset-colored cocktail with earthy and citrus notes.",
+          preparation: "Shake all ingredients with ice. Strain into a rocks glass over fresh ice. Garnish with a mint sprig."
+        },
+        {
+          name: "Twilight Zone",
+          ingredients: [
+            { name: "Roe & Co Irish Whiskey", amount: 2.0 },
+            { name: "Guinness Reduction", amount: 0.75 },
+            { name: "Blackcurrant Liqueur", amount: 0.5 },
+            { name: "Amaro", amount: 0.5 },
+            { name: "Lemon Juice", amount: 0.5 }
+          ],
+          color: "#4A0404",
+          garnish: "Lemon Twist",
+          glassware: "rocks",
+          method: "stirred",
+          description: "A complex Irish whiskey cocktail with dark beer notes and berry undertones.",
+          preparation: "Stir all ingredients with ice until well-chilled. Strain into a rocks glass over a large ice cube. Garnish with a lemon twist."
+        },
+        {
+          name: "TLC (N/A)",
+          ingredients: [
+            { name: "Martini & Rossi Floreale NA Vermouth", amount: 2.0 },
+            { name: "Blood Orange Juice", amount: 1.0 },
+            { name: "Carrot Juice", amount: 0.5 },
+            { name: "Tonic Water", amount: 2.0 }
+          ],
+          color: "#FFA500",
+          garnish: "Orange Wheel",
+          glassware: "highball",
+          method: "built",
+          description: "A sophisticated non-alcoholic cocktail with complex botanical notes.",
+          preparation: "Build in a highball glass over ice. Start with vermouth, then juices, top with tonic water. Stir gently. Garnish with an orange wheel."
         }
       ];
 
