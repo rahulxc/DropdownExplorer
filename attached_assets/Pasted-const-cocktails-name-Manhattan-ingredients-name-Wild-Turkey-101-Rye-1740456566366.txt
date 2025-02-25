@@ -1,0 +1,142 @@
+const cocktails = [
+  {
+    name: "Manhattan",
+    ingredients: [
+      { name: "Wild Turkey 101 Rye", amount: 2.0 },
+      { name: "Sweet Vermouth", amount: 1.0 },
+      { name: "Angostura Bitters", amount: 0.125 },
+      { name: "Grand Marnier", amount: 0.25 }
+    ],
+    color: "#8B0000",
+    garnish: "Cherry",
+    glassware: "coupe",
+    method: "stirred",
+    description: "Classic whiskey cocktail with a perfect balance of sweet and bitter."
+  },
+  {
+    name: "Provençal",
+    ingredients: [
+      { name: "Lavender-infused Roku Gin", amount: 1.75 },
+      { name: "Herbs de Provence Vermouth", amount: 0.75 },
+      { name: "Cointreau", amount: 0.5 }
+    ],
+    color: "#E6E6FA",
+    garnish: "Lavender Sprig",
+    glassware: "coupe",
+    method: "stirred",
+    description: "Floral and herbal French-inspired gin cocktail with delicate aromatics."
+  },
+  {
+    name: "Ready Fire Aim",
+    ingredients: [
+      { name: "Siete Misterios Mezcal", amount: 2.0 },
+      { name: "Lime Juice", amount: 0.75 },
+      { name: "Honey-Pineapple Syrup", amount: 0.75 },
+      { name: "Bittermens Hellfire Bitters", amount: 0.125 }
+    ],
+    color: "#FFD700",
+    garnish: "Lime Wheel",
+    glassware: "coupe",
+    method: "shaken",
+    description: "Smoky mezcal with tropical sweetness and a spicy kick."
+  },
+  {
+    name: "West Side",
+    ingredients: [
+      { name: "Charbay Meyer Lemon Vodka", amount: 2.0 },
+      { name: "Fresh Lemon Juice", amount: 0.75 },
+      { name: "Simple Syrup", amount: 0.5 },
+      { name: "Fresh Mint", amount: 0.25 },
+      { name: "Perrier", amount: 1.0 }
+    ],
+    color: "#ADFF2F",
+    garnish: "Mint Sprig",
+    glassware: "highball",
+    method: "shaken",
+    description: "Bright and refreshing vodka cocktail with vibrant citrus and aromatic mint."
+  },
+  {
+    name: "Fraise Sauvage",
+    ingredients: [
+      { name: "Fords Gin", amount: 1.5 },
+      { name: "Wild Strawberries", amount: 0.5 },
+      { name: "Tahitian Vanilla", amount: 0.25 },
+      { name: "Lemon Juice", amount: 0.5 },
+      { name: "EO Prosecco", amount: 1.0 }
+    ],
+    color: "#FF6B81",
+    garnish: "Strawberry",
+    glassware: "flute",
+    method: "shaken",
+    description: "Elegant gin cocktail with fresh strawberries and vanilla, topped with prosecco."
+  },
+  {
+    name: "Amelia",
+    ingredients: [
+      { name: "Haku Vodka", amount: 1.5 },
+      { name: "St-Germain", amount: 0.75 },
+      { name: "Blackberry Purée", amount: 0.5 },
+      { name: "Fresh Lemon Juice", amount: 0.5 }
+    ],
+    color: "#800080",
+    garnish: "Blackberry",
+    glassware: "coupe",
+    method: "shaken",
+    description: "Fruity and floral vodka cocktail with elegant elderflower notes."
+  },
+  {
+    name: "Billionaire Cocktail",
+    ingredients: [
+      { name: "Wild Turkey Rare Breed Bourbon", amount: 2.0 },
+      { name: "Fresh Lemon Juice", amount: 0.75 },
+      { name: "EO Grenadine", amount: 0.5 },
+      { name: "Absinthe Bitters", amount: 0.25 }
+    ],
+    color: "#CD5C5C",
+    garnish: "Lemon Twist",
+    glassware: "coupe",
+    method: "shaken",
+    description: "Rich and complex bourbon cocktail with bright citrus and subtle anise notes."
+  },
+  {
+    name: "Mata Hari",
+    ingredients: [
+      { name: "Pierre Ferrand 1840 Cognac", amount: 1.75 },
+      { name: "Chai-infused Rouge Vermouth", amount: 0.75 },
+      { name: "Lemon Juice", amount: 0.5 },
+      { name: "Pomegranate Juice", amount: 0.5 }
+    ],
+    color: "#C71585",
+    garnish: "Orange Peel",
+    glassware: "coupe",
+    method: "shaken",
+    description: "Mysterious and exotic cognac cocktail with spicy chai notes and tart pomegranate."
+  },
+  {
+    name: "Old Fashioned",
+    ingredients: [
+      { name: "Bourbon", amount: 2.0 },
+      { name: "Sugar Cube", amount: 0.25 },
+      { name: "Angostura Bitters", amount: 0.125 },
+      { name: "Water", amount: 0.125 }
+    ],
+    color: "#8B4513",
+    garnish: "Orange Peel",
+    glassware: "rocks",
+    method: "built",
+    description: "The original cocktail - sweet, aromatic whiskey with depth and character."
+  },
+  {
+    name: "Negroni",
+    ingredients: [
+      { name: "Gin", amount: 1.0 },
+      { name: "Campari", amount: 1.0 },
+      { name: "Sweet Vermouth", amount: 1.0 }
+    ],
+    color: "#FF4500",
+    garnish: "Orange Peel",
+    glassware: "rocks",
+    method: "stirred",
+    description: "Perfectly balanced bitter and herbal Italian classic."
+  }
+];
