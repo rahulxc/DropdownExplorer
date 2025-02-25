@@ -1,4 +1,3 @@
-// Using the complete implementation from the provided file
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -16,181 +15,20 @@ const cocktails = [
     glassware: "coupe",
     method: "stirred",
     description: "Classic whiskey cocktail with a perfect balance of sweet and bitter."
-  },
-  // ... rest of the cocktails array from the provided file
-];
-
-const CocktailVisualizer = () => {
-  const [selectedCocktail, setSelectedCocktail] = useState(cocktails[0]);
-  const [showDropdown, setShowDropdown] = useState(false);
-  
-  // ... rest of the component implementation from the provided file
-
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-black py-8 text-white">
-      {/* ... rest of the JSX from the provided file */}
-    </div>
-  );
-};
-
-export default CocktailVisualizer;
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-
-const cocktails = [
-  {
-    name: "Manhattan",
-    ingredients: [
-      { name: "Wild Turkey 101 Rye", amount: 2.0 },
-      { name: "Sweet Vermouth", amount: 1.0 },
-      { name: "Angostura Bitters", amount: 0.125 },
-      { name: "Grand Marnier", amount: 0.25 }
-    ],
-    color: "#8B0000",
-    garnish: "Cherry",
-    glassware: "coupe",
-    method: "stirred",
-    description: "Classic whiskey cocktail with a perfect balance of sweet and bitter."
-  },
-  {
-    name: "Provençal",
-    ingredients: [
-      { name: "Lavender-infused Roku Gin", amount: 1.75 },
-      { name: "Herbs de Provence Vermouth", amount: 0.75 },
-      { name: "Cointreau", amount: 0.5 }
-    ],
-    color: "#E6E6FA",
-    garnish: "Lavender Sprig",
-    glassware: "coupe",
-    method: "stirred",
-    description: "Floral and herbal French-inspired gin cocktail with delicate aromatics."
-  },
-  {
-    name: "Ready Fire Aim",
-    ingredients: [
-      { name: "Siete Misterios Mezcal", amount: 2.0 },
-      { name: "Lime Juice", amount: 0.75 },
-      { name: "Honey-Pineapple Syrup", amount: 0.75 },
-      { name: "Bittermens Hellfire Bitters", amount: 0.125 }
-    ],
-    color: "#FFD700",
-    garnish: "Lime Wheel",
-    glassware: "coupe",
-    method: "shaken",
-    description: "Smoky mezcal with tropical sweetness and a spicy kick."
-  },
-  {
-    name: "West Side",
-    ingredients: [
-      { name: "Charbay Meyer Lemon Vodka", amount: 2.0 },
-      { name: "Fresh Lemon Juice", amount: 0.75 },
-      { name: "Simple Syrup", amount: 0.5 },
-      { name: "Fresh Mint", amount: 0.25 },
-      { name: "Perrier", amount: 1.0 }
-    ],
-    color: "#ADFF2F",
-    garnish: "Mint Sprig",
-    glassware: "highball",
-    method: "shaken",
-    description: "Bright and refreshing vodka cocktail with vibrant citrus and aromatic mint."
-  },
-  {
-    name: "Fraise Sauvage",
-    ingredients: [
-      { name: "Fords Gin", amount: 1.5 },
-      { name: "Wild Strawberries", amount: 0.5 },
-      { name: "Tahitian Vanilla", amount: 0.25 },
-      { name: "Lemon Juice", amount: 0.5 },
-      { name: "EO Prosecco", amount: 1.0 }
-    ],
-    color: "#FF6B81",
-    garnish: "Strawberry",
-    glassware: "flute",
-    method: "shaken",
-    description: "Elegant gin cocktail with fresh strawberries and vanilla, topped with prosecco."
-  },
-  {
-    name: "Amelia",
-    ingredients: [
-      { name: "Haku Vodka", amount: 1.5 },
-      { name: "St-Germain", amount: 0.75 },
-      { name: "Blackberry Purée", amount: 0.5 },
-      { name: "Fresh Lemon Juice", amount: 0.5 }
-    ],
-    color: "#800080",
-    garnish: "Blackberry",
-    glassware: "coupe",
-    method: "shaken",
-    description: "Fruity and floral vodka cocktail with elegant elderflower notes."
-  },
-  {
-    name: "Billionaire Cocktail",
-    ingredients: [
-      { name: "Wild Turkey Rare Breed Bourbon", amount: 2.0 },
-      { name: "Fresh Lemon Juice", amount: 0.75 },
-      { name: "EO Grenadine", amount: 0.5 },
-      { name: "Absinthe Bitters", amount: 0.25 }
-    ],
-    color: "#CD5C5C",
-    garnish: "Lemon Twist",
-    glassware: "coupe",
-    method: "shaken",
-    description: "Rich and complex bourbon cocktail with bright citrus and subtle anise notes."
-  },
-  {
-    name: "Mata Hari",
-    ingredients: [
-      { name: "Pierre Ferrand 1840 Cognac", amount: 1.75 },
-      { name: "Chai-infused Rouge Vermouth", amount: 0.75 },
-      { name: "Lemon Juice", amount: 0.5 },
-      { name: "Pomegranate Juice", amount: 0.5 }
-    ],
-    color: "#C71585",
-    garnish: "Orange Peel",
-    glassware: "coupe",
-    method: "shaken",
-    description: "Mysterious and exotic cognac cocktail with spicy chai notes and tart pomegranate."
-  },
-  {
-    name: "Old Fashioned",
-    ingredients: [
-      { name: "Bourbon", amount: 2.0 },
-      { name: "Sugar Cube", amount: 0.25 },
-      { name: "Angostura Bitters", amount: 0.125 },
-      { name: "Water", amount: 0.125 }
-    ],
-    color: "#8B4513",
-    garnish: "Orange Peel",
-    glassware: "rocks",
-    method: "built",
-    description: "The original cocktail - sweet, aromatic whiskey with depth and character."
-  },
-  {
-    name: "Negroni",
-    ingredients: [
-      { name: "Gin", amount: 1.0 },
-      { name: "Campari", amount: 1.0 },
-      { name: "Sweet Vermouth", amount: 1.0 }
-    ],
-    color: "#FF4500",
-    garnish: "Orange Peel",
-    glassware: "rocks",
-    method: "stirred",
-    description: "Perfectly balanced bitter and herbal Italian classic."
   }
 ];
 
 const CocktailVisualizer = () => {
   const [selectedCocktail, setSelectedCocktail] = useState(cocktails[0]);
   const [showDropdown, setShowDropdown] = useState(false);
-  
+
   const getCocktailGradient = (color) => {
     return {
       background: `linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, ${color} 30%, ${color} 100%)`,
       boxShadow: `0 0 20px ${color}40, 0 0 40px ${color}20`
     };
   };
-  
+
   const getMethodIcon = (method) => {
     switch(method) {
       case "shaken":
@@ -237,7 +75,7 @@ const CocktailVisualizer = () => {
         return <span>{method}</span>;
     }
   };
-  
+
   const getGlassShape = () => {
     if (selectedCocktail.glassware === "coupe") {
       return (
@@ -286,7 +124,7 @@ const CocktailVisualizer = () => {
       );
     }
   };
-  
+
   const renderGarnish = () => {
     if (selectedCocktail.garnish.includes("Cherry")) {
       return (
@@ -344,7 +182,7 @@ const CocktailVisualizer = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-black py-8 text-white">
       <h1 className="text-4xl font-bold mb-2 text-center">Elegant Cocktail Visualizer</h1>
       <p className="text-center text-gray-400 mb-4">Explore the balance of components in classic and signature cocktails</p>
-      
+
       <div className="relative mb-8 z-10 w-64">
         <button 
           className="w-full px-4 py-2 bg-gray-800 bg-opacity-60 border border-gray-600 rounded-md flex items-center justify-between text-white"
@@ -353,7 +191,7 @@ const CocktailVisualizer = () => {
           <span>{selectedCocktail.name}</span>
           {showDropdown ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
         </button>
-        
+
         {showDropdown && (
           <div className="absolute top-full left-0 right-0 mt-1 bg-gray-800 border border-gray-600 rounded-md shadow-lg max-h-60 overflow-y-auto">
             {cocktails.map((cocktail, index) => (
@@ -371,23 +209,23 @@ const CocktailVisualizer = () => {
           </div>
         )}
       </div>
-      
+
       <div className="w-full max-w-4xl mx-auto relative">
         <div className="flex justify-center items-center mb-6 min-h-60">
           {getGlassShape()}
           {renderGarnish()}
         </div>
-        
+
         <div className="max-w-md mx-auto bg-gray-800 bg-opacity-60 p-6 rounded-lg backdrop-blur-sm border border-gray-700">
           <h2 className="text-2xl font-bold mb-2 text-center">{selectedCocktail.name}</h2>
-          
+
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-3">Ingredients:</h3>
             <div className="space-y-3">
               {selectedCocktail.ingredients.map((ingredient, idx) => {
                 const getComponentType = (name) => {
                   const lowerName = name.toLowerCase();
-                  
+
                   if (lowerName.includes('whiskey') || lowerName.includes('bourbon') || 
                       lowerName.includes('vodka') || lowerName.includes('gin') || 
                       lowerName.includes('rum') || lowerName.includes('tequila') || 
@@ -418,7 +256,7 @@ const CocktailVisualizer = () => {
                              lowerName.includes('prosecco') || lowerName.includes('champagne')) {
                     return { type: 'dilution', label: 'Dilution', color: '#8BD3E6' };
                   }
-                  
+
                   return { type: 'other', label: 'Other', color: '#ABABAB' };
                 };
 
@@ -441,7 +279,7 @@ const CocktailVisualizer = () => {
                       </div>
                       <span className="text-sm text-gray-300">{ingredient.amount} oz</span>
                     </div>
-                    
+
                     <div className="h-3 w-full bg-gray-700 rounded-full overflow-hidden">
                       <div 
                         className="h-full rounded-full"
@@ -452,7 +290,7 @@ const CocktailVisualizer = () => {
                         }}
                       ></div>
                     </div>
-                    
+
                     <div className="w-full flex justify-between mt-1 px-1">
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="h-1 w-0.5 bg-gray-500"></div>
@@ -463,7 +301,7 @@ const CocktailVisualizer = () => {
               })}
             </div>
           </div>
-          
+
           <div className="mb-4 grid grid-cols-2 gap-4">
             <div>
               <h3 className="text-lg font-semibold mb-1">Served in:</h3>
@@ -474,17 +312,17 @@ const CocktailVisualizer = () => {
               <div>{getMethodIcon(selectedCocktail.method)}</div>
             </div>
           </div>
-          
+
           <div className="mb-4">
             <h3 className="text-lg font-semibold mb-1">Garnish:</h3>
             <p>{selectedCocktail.garnish}</p>
           </div>
-          
+
           <div className="mb-4">
             <h3 className="text-lg font-semibold mb-1">Notes:</h3>
             <p className="italic">{selectedCocktail.description}</p>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-2">Cocktail Components:</h3>
             <div className="grid grid-cols-2 gap-2">
