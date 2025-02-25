@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const cocktails = [
   {
     name: "Manhattan",
+    image: "https://images.unsplash.com/photo-1566733971017-f6a46e761a80?w=800&auto=format&fit=crop",
     ingredients: [
       { name: "Wild Turkey 101 Rye", amount: 2.0 },
       { name: "Sweet Vermouth", amount: 1.0 },
@@ -353,6 +354,15 @@ const CocktailVisualizer = () => {
         </div>
 
         <div className="max-w-md mx-auto bg-gray-800 bg-opacity-60 p-6 rounded-lg backdrop-blur-sm border border-gray-700">
+          {selectedCocktail.image && (
+            <div className="mb-4 rounded-lg overflow-hidden">
+              <img 
+                src={selectedCocktail.image} 
+                alt={selectedCocktail.name}
+                className="w-full h-48 object-cover"
+              />
+            </div>
+          )}
           <h2 className="text-2xl font-bold mb-2 text-center">{selectedCocktail.name}</h2>
 
           <div className="mb-6">
