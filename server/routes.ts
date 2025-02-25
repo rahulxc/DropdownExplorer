@@ -187,7 +187,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           ],
           color: "#FFB6C1",
           garnish: "Thyme Sprig",
-          glassware: "coupe",
+          glassware: "wine",
           method: "shaken",
           description: "A delicate blend of vodka and gin with fruity notes and herbal complexity.",
           preparation: "Shake all ingredients with ice. Double strain into a chilled coupe glass. Garnish with a fresh thyme sprig."
@@ -204,7 +204,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           ],
           color: "#FFA07A",
           garnish: "Mint Sprig",
-          glassware: "rocks",
+          glassware: "wine",
           method: "shaken",
           description: "A vibrant sunset-colored cocktail with earthy and citrus notes.",
           preparation: "Shake all ingredients with ice. Strain into a rocks glass over fresh ice. Garnish with a mint sprig."
@@ -235,7 +235,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           ],
           color: "#FFA500",
           garnish: "Orange Wheel",
-          glassware: "highball",
+          glassware: "collins",
           method: "built",
           description: "A sophisticated non-alcoholic cocktail with complex botanical notes.",
           preparation: "Build in a highball glass over ice. Start with vermouth, then juices, top with tonic water. Stir gently. Garnish with an orange wheel."

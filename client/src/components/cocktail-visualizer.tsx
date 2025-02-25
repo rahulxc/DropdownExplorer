@@ -257,7 +257,28 @@ const CocktailVisualizer = () => {
   };
 
   const getGlassShape = () => {
-    if (selectedCocktail.glassware === "coupe") {
+    if (selectedCocktail.glassware === "wine") {
+      return (
+        <div className="relative flex flex-col items-center">
+          <div className="relative w-40 h-48">
+            <div className="absolute bottom-0 left-0 right-0 mx-auto w-32 h-32 rounded-b-full overflow-hidden border-2 border-b-0 border-l-0 border-r-0 border-t-2 border-gray-200 border-opacity-40">
+              <div className="w-full h-full rounded-b-full" style={getCocktailGradient(selectedCocktail.color)}></div>
+            </div>
+          </div>
+          <div className="w-2 h-16 bg-gradient-to-b from-gray-100 to-gray-300 bg-opacity-80"></div>
+          <div className="w-16 h-2 rounded-full bg-gradient-to-b from-gray-200 to-gray-400"></div>
+        </div>
+      );
+    } else if (selectedCocktail.glassware === "collins") {
+      return (
+        <div className="w-20 h-56 relative">
+          <div className="absolute top-0 left-0 right-0 bottom-0 border-2 border-gray-200 border-opacity-40 rounded-sm overflow-hidden">
+            <div className="w-full h-3/4" style={getCocktailGradient(selectedCocktail.color)}></div>
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200 bg-opacity-30"></div>
+        </div>
+      );
+    } else if (selectedCocktail.glassware === "coupe") {
       return (
         <div className="relative flex flex-col items-center">
           <div className="relative w-48 h-32">
