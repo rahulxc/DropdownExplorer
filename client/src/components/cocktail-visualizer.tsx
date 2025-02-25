@@ -13,28 +13,7 @@ type Cocktail = {
   preparation: string;
 };
 
-const CocktailVisualizer = () => {
-  const [cocktails, setCocktails] = useState<Cocktail[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch('/api/cocktails')
-      .then(res => res.json())
-      .then(data => {
-        setCocktails(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError('Failed to load cocktails');
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <div className="text-white text-center">Loading...</div>;
-  if (error) return <div className="text-red-500 text-center">{error}</div>;
-  if (cocktails.length === 0) return <div className="text-white text-center">No cocktails found</div>;
-  {
+const mockCocktails: Cocktail[] = [{
     name: "Manhattan",
     ingredients: [
       { name: "Wild Turkey 101 Rye", amount: 2.0 },
@@ -183,10 +162,41 @@ const CocktailVisualizer = () => {
     method: "stirred",
     description: "Perfectly balanced bitter and herbal Italian classic.",
     preparation: "Add all ingredients to mixing glass with ice. Stir until well-chilled and properly diluted. Strain into rocks glass over fresh ice. Express oils from orange peel and garnish."
+  },
+  {
+    name: "Mezcalita",
+    ingredients: [
+      { name: "Mezcal", amount: 2.0 },
+      { name: "Lime juice", amount: 0.75 },
+      { name: "Pineapple juice", amount: 0.5 }
+    ],
+    color: "#E6B800",
+    garnish: "Lime wheel",
+    glassware: "rocks",
+    method: "shaken",
+    description: "Smoky and tropical mezcal cocktail.",
+    preparation: "Shake all ingredients with ice. Strain into a rocks glass over fresh ice. Garnish with a lime wheel."
   }
 ];
 
 const CocktailVisualizer = () => {
+  const [cocktails, setCocktails] = useState<Cocktail[]>(mockCocktails);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('/api/cocktails')
+      .then(res => res.json())
+      .then(data => {
+        setCocktails(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError('Failed to load cocktails');
+        setLoading(false);
+      });
+  }, []);
+
   const [selectedCocktail, setSelectedCocktail] = useState(cocktails[0]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeTab, setActiveTab] = useState('recipe');
@@ -347,6 +357,10 @@ const CocktailVisualizer = () => {
     }
     return null;
   };
+
+  if (loading) return <div className="text-white text-center">Loading...</div>;
+  if (error) return <div className="text-red-500 text-center">{error}</div>;
+  if (cocktails.length === 0) return <div className="text-white text-center">No cocktails found</div>;
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 via-purple-950/20 to-black py-8 text-white">
