@@ -14,7 +14,8 @@ const cocktails = [
     garnish: "Cherry",
     glassware: "coupe",
     method: "stirred",
-    description: "Classic whiskey cocktail with a perfect balance of sweet and bitter."
+    description: "Classic whiskey cocktail with a perfect balance of sweet and bitter.",
+    preparation: "Add all ingredients to mixing glass with ice. Stir well until properly chilled and diluted. Strain into a chilled coupe glass. Garnish with a cherry."
   },
   {
     name: "Provençal",
@@ -447,6 +448,11 @@ const CocktailVisualizer = () => {
           <div className="mb-4">
             <h3 className="text-lg font-semibold mb-1">Notes:</h3>
             <p className="italic">{selectedCocktail.description}</p>
+          </div>
+
+          <div className="mb-4">
+            <h3 className="text-lg font-semibold mb-1">Preparation:</h3>
+            <p className="text-sm text-gray-300">{selectedCocktail.preparation}</p>
           </div>
 
           <div>
