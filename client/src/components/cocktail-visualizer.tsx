@@ -4,7 +4,6 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const cocktails = [
   {
     name: "Manhattan",
-    image: "https://www.thecocktaildb.com/images/media/drink/hz7p4t1589575281.jpg",
     ingredients: [
       { name: "Wild Turkey 101 Rye", amount: 2.0 },
       { name: "Sweet Vermouth", amount: 1.0 },
@@ -20,7 +19,6 @@ const cocktails = [
   },
   {
     name: "Provençal",
-    image: "https://www.thecocktaildb.com/images/media/drink/vcyvpq1485083300.jpg",
     ingredients: [
       { name: "Lavender-infused Roku Gin", amount: 1.75 },
       { name: "Herbs de Provence Vermouth", amount: 0.75 },
@@ -355,27 +353,6 @@ const CocktailVisualizer = () => {
         </div>
 
         <div className="max-w-md mx-auto bg-gray-800 bg-opacity-60 p-6 rounded-lg backdrop-blur-sm border border-gray-700">
-          {selectedCocktail.image && (
-            <div className="mb-4 rounded-lg overflow-hidden relative">
-              <div 
-                className="absolute inset-0" 
-                style={{
-                  background: `linear-gradient(180deg, 
-                    transparent 0%, 
-                    ${selectedCocktail.color}40 70%, 
-                    ${selectedCocktail.color}80 100%)`
-                }}
-              />
-              <img 
-                src={selectedCocktail.image} 
-                alt={selectedCocktail.name}
-                className="w-full h-56 object-cover rounded-lg transform transition-transform duration-300 hover:scale-105"
-                style={{
-                  boxShadow: `0 4px 20px ${selectedCocktail.color}40`
-                }}
-              />
-            </div>
-          )}
           <h2 className="text-2xl font-bold mb-2 text-center">{selectedCocktail.name}</h2>
 
           <div className="mb-6">
