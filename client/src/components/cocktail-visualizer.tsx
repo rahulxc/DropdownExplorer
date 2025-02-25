@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Info } from 'lucide-react';
 
 const cocktails = [
   {
@@ -157,6 +157,8 @@ const cocktails = [
 const CocktailVisualizer = () => {
   const [selectedCocktail, setSelectedCocktail] = useState(cocktails[0]);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [activeTab, setActiveTab] = useState('recipe');
+  const [showTutorial, setShowTutorial] = useState(false);
 
   const getCocktailGradient = (color) => {
     return {
@@ -315,9 +317,9 @@ const CocktailVisualizer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 to-black py-8 text-white">
-      <h1 className="text-4xl font-bold mb-2 text-center">Elegant Cocktail Visualizer</h1>
-      <p className="text-center text-gray-400 mb-4">Explore the balance of components in classic and signature cocktails</p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-gray-900 via-purple-950/20 to-black py-8 text-white">
+      <h1 className="text-4xl font-bold mb-2 text-center">Liquid Alchemy</h1>
+      <p className="text-center text-gray-400 mb-4">Unveiling the sensual artistry behind exquisite libations</p>
 
       <div className="relative mb-8 z-10 w-64">
         <button 
